@@ -1,17 +1,15 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Test from "./pages/Test";
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>PostHub</h1>
-      <p className="read-the-docs">
-        PostHub is a simple full-stack MERN application.
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Test />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
