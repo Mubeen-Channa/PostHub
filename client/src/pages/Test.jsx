@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import { BASE_URL } from "../api";
+
 function Test() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/test")
+      .get(`${BASE_URL}/test`)
       .then((res) => {
         console.log("Frontend received:", res.data);
         setData(res.data);
