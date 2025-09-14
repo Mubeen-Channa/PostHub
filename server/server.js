@@ -12,7 +12,11 @@ const app = express()
 dotenv.config();
 
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: "https://posthubapp.netlify.app",
+  credentials: true,
+}));
 
 const uri = process.env.MONGO_URI;
 
