@@ -14,8 +14,7 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://posthubapp.netlify.app",
-  credentials: true,
+  origin: "*"
 }));
 
 const uri = process.env.MONGO_URI;
